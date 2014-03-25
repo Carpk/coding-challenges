@@ -9,6 +9,12 @@ Fun project that has yet to be completed, play battleship against a computer. As
 
 `ruby battleship.rb`
 
+### Ruby ToDo
+
+This project was interesting, data get loaded from csv file and manipulated from the CL. I took it a bit further, wanting to symolize the passed arguments I found the `send` command.
+
+`ruby todo.rb`(followed by the command you would like to use)
+
 ### Sudoku
 
 Command line solver that imports filed from 'unsolved' file and creates solutions for them. Orginally done in a group project, I couldnt sway the group to create a solution the way I envisioned, so this was my own solution. I feel its not too far away from a recursive formula.
