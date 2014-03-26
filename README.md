@@ -15,6 +15,10 @@ This project was interesting, data get loaded from csv file and manipulated from
 
 `ruby todo.rb`(followed by the command you would like to use)
 
+### SQL excercises
+
+This is a small subset of some of the smaller SQL excercises we had to finish, other ones were too large to add to this format of 'sample excersices'. But can be found elsewhere in the repository.
+
 ### Sudoku
 
 Command line solver that imports filed from 'unsolved' file and creates solutions for them. Orginally done in a group project, I couldnt sway the group to create a solution the way I envisioned, so this was my own solution. I feel its not too far away from a recursive formula.
