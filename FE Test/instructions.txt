@@ -1,0 +1,18 @@
+The attached PSD includes a visual comp for a UI widget or component that might appear within a larger web app. Please take 4-5 hours to build out a functional version of this control using HTML, CSS and JavaScript. Our expected functionality is outlined below:
+
+- The "PWR" button should simulate the device powering off and on.
+- The display will show the selected duration.
+- The Slider will set the value of the duration and affect the displayed duration.
+- The Up/Down arrows will increase and decrease the duration and change the position of the slider as well.
+- The Min/Hrs switch will toggle the displayed value between minutes and hours.
+
+
+A few requirements:
+
+- The control should be pixel perfect in all modern browsers and degrade well down to IE7. You are free to use HTML5 and CSS3 as much as you like. Any behavior which uses HTML5 elements should be built in a way that it'll still function in older browsers.
+
+- Feel free to use jQuery and/or any UI libraries/plugins that you feel are appropriate for this component. 
+
+- JavaScript and CSS should be external.
+
+Beyond that, we'd like to see how you'll approach building this. When you're done, send us back your progress in a zipped folder that contains all of the prepared images, html and css.
