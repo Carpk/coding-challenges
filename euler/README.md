@@ -1,7 +1,11 @@
 
 ## Project Euler
 
-exhausted from the job hunt, thought I would do some classic project euler excercises for fun!
+Exhausted from the job hunt, thought I would do some classic project euler excercises for fun!
+
+### 1 Multiples of 3 and 5
+
+
 
 ### 2 Even Fibonacci numbers
 
