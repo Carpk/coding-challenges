@@ -8,6 +8,19 @@ class ToDoView
       puts "#{index}: #{task[0]}"
     end
   end
+
+  def view(arg)
+    puts arg
+  end
+
+  def help
+    puts "Commands:"
+    puts "help    -displays this help page"
+    puts "list    -shows every item of todo list"
+    puts "add     -follow with new task to include on list"
+    puts "delete  -follow with number of task you want to delete"
+    
+  end
 end
 
 ##################################################
@@ -21,7 +34,7 @@ class ToDoControl
   end
 
   def run(arg)
-    puts arg
+    @viewer.run(arg)
   end
 
   def list(*)
@@ -36,6 +49,10 @@ class ToDoControl
   def delete(num)
     @model.remove_task(num.to_i)
     @model.save
+  end
+
+  def help(*)
+    @viewer.help
   end
 end
 
@@ -73,6 +90,9 @@ class ToDoModel
   end
 end
 
+if ARGV[0] == nil
+  ARGV[0] = "help"
+end
 
 ToDoControl.new.send(ARGV[0].to_s, ARGV[1..-1].join(" "))
 
