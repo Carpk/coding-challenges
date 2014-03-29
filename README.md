@@ -11,7 +11,7 @@ Fun project that has yet to be completed, play battleship against a computer. As
 
 ### Euler
 
-Excercises from Project Euler, only completed about 5 puzzles. None of which are very impressive.
+Excercises from Project Euler, only completed about 5 puzzles.
 
 ### Ruby ToDo
 
