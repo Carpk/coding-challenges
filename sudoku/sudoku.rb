@@ -15,7 +15,6 @@ class Sudoku
         cell.each_with_index do |find_empty, void_indx|
           if find_empty == 0
             possibilities = @potentials.reject { |i| local_values(row_indx, cell_indx, void_indx).include?(i) } # output should remove any matching pairs with addition to base base
-            p "row: #{row_indx}, column: #{cell_indx}, cell: #{void_indx}, axis values:#{possibilities}"
             if possibilities.length == 1
               @board[row_indx][cell_indx][void_indx] = possibilities[0]
             end
