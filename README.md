@@ -9,6 +9,10 @@ Fun project that has yet to be completed, play battleship against a computer. As
 
 `ruby battleship.rb`
 
+### Euler
+
+Excercises from Project Euler, only completed about 5 puzzles. None of which are very impressive.
+
 ### Ruby ToDo
 
 This project was interesting, data get loaded from csv file and manipulated from the CL. I took it a bit further, wanting to symolize the passed arguments I found the `send` command.
