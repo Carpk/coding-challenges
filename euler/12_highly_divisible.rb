@@ -18,3 +18,20 @@
 # What is the value of the first triangle number to have over five hundred divisors?
 
 
+divisors, max = [], 0
+
+until divisors.length > 500
+	divisors.clear
+	max += 1 
+	triangle_num = (0..max).to_a.reduce(:+)
+	numerator = 1
+	until numerator > Math.sqrt(triangle_num)
+	  if triangle_num % numerator == 0
+	  	divisors << numerator
+	  	divisors << triangle_num / numerator
+	  end
+	  numerator += 1
+	end
+end
+
+p divisors.max 
