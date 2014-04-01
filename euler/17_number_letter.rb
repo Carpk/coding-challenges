@@ -25,15 +25,15 @@ CONVERSION = { 1 => "one",
 							12 => "twelve",
 							13 => "thirteen",
 							14 => "fourteen",
-							15 => "fithteen",
+							15 => "fifteen",
 							16 => "sixteen",
 							17 => "seventeen",
 							18 => "eighteen",
 							19 => "nineteen",
 							20 => "twenty",
 							30 => "thirty",
-							40 => "fourty",
-							50 => "fithty",
+							40 => "forty",
+							50 => "fifty",
 							60 => "sixty",
 							70 => "seventy",
 							80 => "eighty",
@@ -46,21 +46,24 @@ array = []
 	temp = []
 
 	if number >= 1000
-
+		temp << CONVERSION[number/1000] + "thousand"
+		number = number % 1000
 	end
 	
 	if number >= 100 
 		temp << CONVERSION[number/100] + "hundred"
-		number = number % temp
+		number = number % 100
 		temp << "and" unless number == 0 
 	end
 
-	if (11..19).include?(number)
-
-	elsif
-		
+	if number >=20
+		temp << CONVERSION[(number/10)*10]
+		number = number % 10
 	end
 
+	if (1..19).include?(number)
+		temp << CONVERSION[number]
+	end
 
 	array << temp.join
 
