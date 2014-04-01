@@ -54,7 +54,6 @@ the_tree = [[75],
 
 
 
-
 def span_tree(tree,position,sum)
 	@max ||= 0
 	sum += tree[0][position]
@@ -68,5 +67,4 @@ end
 
 
 puts span_tree(the_tree, 0, 0)
-
 
