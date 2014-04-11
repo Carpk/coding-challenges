@@ -12,7 +12,31 @@
 
 # Evaluate the sum of all the amicable numbers under 10000.
 
+amicables = []
 
+1.upto(220) do |num|
+  divisors = []
+  Math.sqrt(num).round.downto(1) do |pssbl_dvsr|
+    if num % pssbl_dvsr == 0
+      divisors.unshift(pssbl_dvsr)
+      divisors << num / pssbl_dvsr
+    end
+  end
+  
+  pssbl_amica = divisors.reduce(:+) - num
+  divisors.clear
+  Math.sqrt(pssbl_amica).round.downto(1) do |pssbl_dvsr|
+    if pssbl_amica % pssbl_dvsr == 0
+      divisors.unshift(pssbl_dvsr)
+      divisors << pssbl_amica / pssbl_dvsr
+    end
+  end
+  temp = divisors.reduce(:+) - num
+  if num != temp && temp > 0 && num > 0 
+    amicables << temp 
+    amicables << num
+  end
+end
 
-
+p amicables
 
