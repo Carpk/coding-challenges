@@ -30,7 +30,6 @@ class TicTacToe
     @view.display_board(@board)
     self.send(@token)
   end
-
 end
 
 TicTacToe.new.play 

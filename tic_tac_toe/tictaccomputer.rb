@@ -77,6 +77,24 @@ class Computer
     end 
   end
 
+  def cornerjumper
+    case @rolls.last
+    when 8
+      @rolls << 2
+    when 2
+      if @rolls[5] == "   "
+        @rolls << 5
+      else
+        @rolls << 6
+    when 6
+      if @roll[4] == "   "
+        @rolls << 4
+      elsif @rolls[7] == "   "
+        @rolls << 7
+      end
+    end 
+  end
+
 
 
   def pull_strategy
