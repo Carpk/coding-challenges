@@ -21,8 +21,8 @@ class TicTacView
     gets.chomp
   end
 
-  def tie
-    puts "its a tie"
+  def tie(msg)
+    puts msg
   end
 
   def error(msg)

@@ -35,9 +35,8 @@ class TicTacToe
     @view.display_board(@board)
     if @pc.win?
       @view.win(@pc.persona[:win])
-
     elsif @board.include?("   ") == false
-      @view.tie
+      @view.tie(@pc.persona[:tie])
     else
       self.send(@token)
     end
