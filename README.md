@@ -28,3 +28,9 @@ This is a small subset of some of the smaller SQL excercises we had to finish, o
 Command line solver that imports filed from 'unsolved' file and creates solutions for them. Orginally done in a group project, I couldnt sway the group to create a solution the way I envisioned, so this was my own solution. I feel its not too far away from a recursive formula.
 
 `ruby sudoku.rb`
+
+### Tic-Tac-Toe
+
+Can you beat the unbeatable? Try your skills at tic-tac-toe vs the computer's AI.
+
+'ruby tictactoe.rb'
