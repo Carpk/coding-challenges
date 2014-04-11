@@ -95,6 +95,24 @@ class Computer
     end 
   end
 
+  def middlelane
+    case @rolls.last
+    when 8
+      @rolls << 4
+    when 4
+      if @rolls[0] == "   "
+        @rolls << 0
+      elsif @rolls[1] == " O "
+        @rolls << 2
+      elsif @rolls[3] == " O "
+        @rolls << 6
+      end
+    when 2
+
+    when 6
+
+    end 
+  end
 
 
   def pull_strategy
@@ -106,11 +124,10 @@ class Computer
       @strategy = "cornerjumper"
     elsif @grid[1]==" O " || @grid[3]==" O "
       @strategy = "middlelane" 
-    elsif @grid[4] == " O "
+    elsif @grid[4]==" O "
       @strategy = "catstie"
     end
     self.send(@strategy)
   end
-
 end
 
