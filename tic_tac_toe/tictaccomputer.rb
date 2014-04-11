@@ -141,25 +141,49 @@ class Computer
       elsif @grid[7] == " O "
         @rolls << 1        
       end
-    when 1 || 5
+    when 1
       if @grid[2] == "   "
         @rolls << 2
+      elsif @grid[6] == "   "
+        @rolls << 6
       end
-    when 3 || 7
+    when 5
+      if @grid[2] == "   "
+        @rolls << 2
+      elsif @grid[6] == "   "
+        @rolls << 6
+      end
+    when 3
       if @grid[6] == "   "
         @rolls << 6
+      elsif @grid[2] == "   "
+        @rolls << 2
+      end
+    when 7
+      if @grid[6] == "   "
+        @rolls << 6
+      elsif @grid[2] == "   "
+        @rolls << 2
       end
     when 2
       if @grid[1] == "   "
         @rolls << 1
       elsif @grid[5] == "   "
         @rolls << 5
+      elsif @grid[3] == "   "
+        @rolls << 3
+      elsif @grid[7] == "   "
+        @rolls << 7
       end
     when 6
       if @grid[3] == "   "
         @rolls << 3
       elsif @grid[7] == "   "
         @rolls << 7
+      elsif @grid[5] == "   "
+        @rolls << 5
+      elsif @grid[1] == "   "
+        @rolls << 1
       end
     end
   end       
