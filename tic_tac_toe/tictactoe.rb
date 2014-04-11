@@ -9,7 +9,7 @@ class TicTacToe
               "   ","   ","   "]
     @token = "pc_turn"
     @pc = Computer.new
-    @view = TicTacView.new
+    @view = TicTacView.new@pc.persona[:name]
   end
 
   def pc_turn
@@ -21,14 +21,26 @@ class TicTacToe
 
   def player_turn
     indices = @view.prompt_player.to_i - 1
-    @board[indices] = " O "
-    @token = "pc_turn"
-    play
+    if @board[indices] == "   "
+      @board[indices] = " O "
+      @token = "pc_turn"
+      play
+    else
+      @view.error(@pc.persona[:error])
+      player_turn
+    end
   end
 
   def play
     @view.display_board(@board)
-    self.send(@token)
+    if @pc.win?
+      @view.win(@pc.persona[:win])
+
+    elsif @board.include?("   ") == false
+      @view.tie
+    else
+      self.send(@token)
+    end
   end
 end
 
