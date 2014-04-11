@@ -86,6 +86,7 @@ class Computer
         @rolls << 5
       else
         @rolls << 6
+      end
     when 6
       if @rgrid[4] == "   "
         @rolls << 4
@@ -147,6 +148,18 @@ class Computer
     when 3 || 7
       if @grid[6] == "   "
         @rolls << 6
+      end
+    when 2
+      if @grid[1] == "   "
+        @rolls << 1
+      elsif @grid[5] == "   "
+        @rolls << 5
+      end
+    when 6
+      if @grid[3] == "   "
+        @rolls << 3
+      elsif @grid[7] == "   "
+        @rolls << 7
       end
     end
   end       
