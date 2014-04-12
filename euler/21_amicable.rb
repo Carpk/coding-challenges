@@ -14,7 +14,7 @@
 
 amicables = []
 
-1.upto(220) do |num|
+1.upto(9999) do |num|
   divisors = []
   Math.sqrt(num).round.downto(1) do |pssbl_dvsr|
     if num % pssbl_dvsr == 0
@@ -22,21 +22,37 @@ amicables = []
       divisors << num / pssbl_dvsr
     end
   end
-  
-  pssbl_amica = divisors.reduce(:+) - num
+ # p divisors
+  first_num = divisors[0..-2].reduce(:+)
+ # p first_num
   divisors.clear
-  Math.sqrt(pssbl_amica).round.downto(1) do |pssbl_dvsr|
-    if pssbl_amica % pssbl_dvsr == 0
+  Math.sqrt(first_num).round.downto(1) do |pssbl_dvsr|
+    if first_num % pssbl_dvsr == 0
       divisors.unshift(pssbl_dvsr)
-      divisors << pssbl_amica / pssbl_dvsr
+      divisors << first_num / pssbl_dvsr
     end
   end
-  temp = divisors.reduce(:+) - num
-  if num != temp && temp > 0 && num > 0 
-    amicables << temp 
-    amicables << num
+  #p divisors
+  second_num = divisors[0..-2].reduce(:+)
+  #p second_num
+  divisors.clear
+  Math.sqrt(second_num).round.downto(1) do |pssbl_dvsr|
+    if second_num % pssbl_dvsr == 0
+      divisors.unshift(pssbl_dvsr)
+      divisors << second_num / pssbl_dvsr
+    end
   end
+
+
+  if first_num != second_num && first_num == divisors.reduce(:+) - num
+    amicables << second_num
+    amicables << first_num 
+  end
+
+  # if num != temp && temp > 0 && num > 0 
+  #   amicables << temp 
+  #   amicables << num
+  # end
 end
 
-p amicables
-
+p amicables.uniq.reduce(:+)
