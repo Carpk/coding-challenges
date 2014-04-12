@@ -11,4 +11,13 @@
 # What is the total of all the name scores in the file?
 
 
+file = File.read("names.txt")
+word_array = []
+file.scan(/[A-Z]{1,}/){|name| word_array << name}
+name_score = 0
 
+word_array.sort.each_with_index do |name, index|
+  name.each_byte {|letter| name_score += (index + 1) * (letter-64) }
+end
+
+puts name_score
