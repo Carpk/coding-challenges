@@ -35,6 +35,8 @@ class TicTacView
 
   def display_board(board)
     print "\e[2J"
+    print "\e[H"
+    # print "\e[2J"
     print <<-EOS
     #{board[0]}|#{board[1]}|#{board[2]}
     ---|---|---

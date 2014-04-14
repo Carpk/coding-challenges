@@ -12,13 +12,15 @@
 
 # How many such routes are there through a 20×20 grid?
 
-#           .
-#         .   .
-#       .   .   .
 #     .   .   .   .
-#       .   .   .
-#         .   .
-#           . 
+
+#     .   .   .   .
+  
+#     .   .   .   .
+
+#     .   .   .   .
+ 
+
 
 
 def lattice_path(length)
@@ -34,5 +36,5 @@ def lattice_path(length)
 end
 
 
-puts lattice_path(20) * 2 -2
+puts lattice_path(3)
 
